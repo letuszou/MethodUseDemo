@@ -5,24 +5,25 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class TwoActivity extends AppCompatActivity {
+public class ActivityMethodTwoActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_two);
+        setContentView(R.layout.activity_method_two);
 
-        Button btn_two_click = (Button) findViewById(R.id.btn_two_click);
-        btn_two_click.setOnClickListener(new View.OnClickListener() {
+        Button btn_activity_method_activity_two = (Button) findViewById(R.id.btn_activity_method_activity_two);
+        btn_activity_method_activity_two.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 click();
             }
         });
+
     }
 
     private void click(){
-        MainActivity.instance.method();
+        ActivityMethodActivity.instance.method();
     }
 
 

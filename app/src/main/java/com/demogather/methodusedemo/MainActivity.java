@@ -1,40 +1,45 @@
 package com.demogather.methodusedemo;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    private Button btn_main_one_click;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
-        Button btn_one_click = (Button) findViewById(R.id.btn_one_click);
-        btn_one_click.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(MainActivity.this,TwoActivity.class));
-            }
-        });
-
-        init();
+        initView();
+        setListener();
 
     }
 
-    public static MainActivity instance = null;
-
-    private void init() {
-        instance = this;
+    private void initView(){
+        btn_main_one_click = (Button) findViewById(R.id.btn_main_one_click);
     }
 
-    public void method(){
-        Toast.makeText(MainActivity.this,"第二个界面调用了第一个界面的方法",Toast.LENGTH_SHORT).show();
+    private void setListener(){
+        btn_main_one_click.setOnClickListener(this);
+    }
+
+    private void enterOne(){
+        startActivity(new Intent(MainActivity.this,ActivityMethodActivity.class));
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.btn_main_one_click:
+                enterOne();
+                break;
+        }
+
     }
 
 
