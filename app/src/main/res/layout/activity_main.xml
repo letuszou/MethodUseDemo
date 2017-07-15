@@ -3,16 +3,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.demogather.methodusedemo.MainActivity">
+    tools:context="com.demogather.methodusedemo.activity.MainActivity">
 
     <Button
         android:gravity="center"
         android:id="@+id/btn_main_one_click"
         android:text="跳到activity调用activity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+
+    <Button
+        android:gravity="center"
+        android:id="@+id/btn_main_two_click"
+        android:layout_marginTop="10dp"
+        android:text="跳到adapter调用activity"
         android:layout_width="match_parent"
         android:layout_height="50dp" />
 

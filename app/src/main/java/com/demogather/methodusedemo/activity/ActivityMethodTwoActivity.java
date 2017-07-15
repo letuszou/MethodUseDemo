@@ -1,9 +1,11 @@
-package com.demogather.methodusedemo;
+package com.demogather.methodusedemo.activity;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+
+import com.demogather.methodusedemo.R;
 
 public class ActivityMethodTwoActivity extends AppCompatActivity {
 
@@ -25,6 +27,7 @@ public class ActivityMethodTwoActivity extends AppCompatActivity {
     private void click(){
         ActivityMethodActivity.instance.method();
     }
+
 
 
 }

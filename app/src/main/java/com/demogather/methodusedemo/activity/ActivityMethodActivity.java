@@ -1,4 +1,4 @@
-package com.demogather.methodusedemo;
+package com.demogather.methodusedemo.activity;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.demogather.methodusedemo.R;
 
 public class ActivityMethodActivity extends AppCompatActivity {
 

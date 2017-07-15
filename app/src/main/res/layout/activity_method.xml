@@ -3,12 +3,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.demogather.methodusedemo.ActivityMethodActivity">
+    tools:context="com.demogather.methodusedemo.activity.ActivityMethodActivity">
 
     <Button
         android:id="@+id/btn_activity_method_activity"
         android:text="跳转界面"
         android:layout_width="match_parent"
         android:layout_height="50dp" />
+
+    <TextView
+        android:padding="10dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:text="第一个页面"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 </RelativeLayout>
