@@ -26,4 +26,14 @@
         android:layout_width="match_parent"
         android:layout_height="50dp" />
 
+
+    <Button
+        android:gravity="center"
+        android:id="@+id/btn_main_three_click"
+        android:layout_marginTop="10dp"
+        android:text="跳到fragment调用activity"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+
 </LinearLayout>

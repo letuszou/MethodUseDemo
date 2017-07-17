@@ -5,3 +5,5 @@
 实现activity之间的方法的互相调用
 ## 2017-7-15 ##
 实现了adapter和activity之间的方法互调
+## 2017-7-17 ##
+实现 fragment调用父activity中的方法

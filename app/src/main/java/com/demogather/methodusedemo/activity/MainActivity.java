@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private Button btn_main_one_click;
     private Button btn_main_two_click;
+    private Button btn_main_three_click;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,11 +27,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void initView() {
         btn_main_one_click = (Button) findViewById(R.id.btn_main_one_click);
         btn_main_two_click = (Button) findViewById(R.id.btn_main_two_click);
+        btn_main_three_click = (Button) findViewById(R.id.btn_main_three_click);
     }
 
     private void setListener() {
         btn_main_one_click.setOnClickListener(this);
         btn_main_two_click.setOnClickListener(this);
+        btn_main_three_click.setOnClickListener(this);
     }
 
     private void enterOne() {
@@ -41,6 +44,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         startActivity(new Intent(MainActivity.this, ActivityMethodAdapterActivity.class));
     }
 
+    private void enterThree(){
+        startActivity(new Intent(MainActivity.this, FragmentMethodActivity.class));
+    }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
@@ -49,6 +56,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.btn_main_two_click:
                 enterTwo();
+                break;
+            case R.id.btn_main_three_click:
+                enterThree();
                 break;
         }
 

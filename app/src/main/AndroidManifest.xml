@@ -17,7 +17,8 @@
         </activity>
         <activity android:name=".activity.ActivityMethodActivity" />
         <activity android:name=".activity.ActivityMethodTwoActivity" />
-        <activity android:name=".activity.ActivityMethodAdapterActivity"></activity>
+        <activity android:name=".activity.ActivityMethodAdapterActivity" />
+        <activity android:name=".activity.FragmentMethodActivity"></activity>
     </application>
 
 </manifest>
