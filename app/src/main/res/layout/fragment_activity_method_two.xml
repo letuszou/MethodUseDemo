@@ -1,32 +1,41 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.demogather.methodusedemo.fragment.ActivityMethodFragment">
-
+    android:layout_height="match_parent">
 
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
-        <TextView
-            android:gravity="center"
-            android:text="第二个fragment"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/btn_fragment_activity_method_two"
-            android:text="fragment调用fragment的方法"
-            android:textSize="12sp"
-            android:layout_margin="12dp"
-            android:gravity="center"
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="第二个fragment(adapter调用fragment中的方法)" />
+
+            <Button
+                android:id="@+id/btn_fragment_adapter_method_two"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_margin="12dp"
+                android:gravity="center"
+                android:text="fragment调用adapter的方法"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+        <ListView
+            android:layout_marginTop="10dp"
+            android:id="@+id/listView"
             android:layout_width="match_parent"
-            android:layout_height="45dp" />
-
+            android:layout_height="wrap_content"/>
 
     </LinearLayout>
-
 
 </FrameLayout>

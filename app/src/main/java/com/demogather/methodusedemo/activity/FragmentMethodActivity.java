@@ -68,7 +68,6 @@ public class FragmentMethodActivity extends FragmentActivity implements View.OnC
     }
 
 
-
     public void method() {
         Toast.makeText(FragmentMethodActivity.this, "fragment调用activity的方法", Toast.LENGTH_SHORT).show();
     }

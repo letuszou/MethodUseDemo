@@ -24,13 +24,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="6dp"
-            android:text="切换其他fragment" />
+            android:text="第一个fragment" />
     <Button
         android:id="@+id/btn_fragment_activity_fragment_two"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="6dp"
-        android:text="第二盒fragment" />
+        android:text="第二个fragment" />
     </LinearLayout>
 
 </RelativeLayout>
