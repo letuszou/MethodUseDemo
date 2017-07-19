@@ -12,7 +12,15 @@
 
     <Button
         android:id="@+id/btn_activity_method_activity_two"
-        android:text="调用第一个界面的方法"
+        android:text="调用第一个界面的方法(静态对象调用)"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <Button
+        android:layout_below="@+id/btn_activity_method_activity_two"
+        android:layout_marginTop="15dp"
+        android:id="@+id/btn_activity_method_activity_two2"
+        android:text="调用第一个界面的方法(返回值调用)"
         android:layout_width="match_parent"
         android:layout_height="50dp" />
 

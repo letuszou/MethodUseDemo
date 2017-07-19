@@ -7,7 +7,15 @@
 
     <Button
         android:id="@+id/btn_activity_method_activity"
-        android:text="跳转界面"
+        android:text="跳转界面(静态对象调用)"
+        android:layout_width="match_parent"
+        android:layout_height="50dp" />
+
+    <Button
+        android:layout_below="@+id/btn_activity_method_activity"
+        android:id="@+id/btn_activity_method_activity2"
+        android:layout_marginTop="15dp"
+        android:text="跳转界面(返回值调用)"
         android:layout_width="match_parent"
         android:layout_height="50dp" />
 

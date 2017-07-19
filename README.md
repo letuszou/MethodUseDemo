@@ -9,3 +9,5 @@
 实现 fragment调用父activity中的方法
 ## 2017-7-18 ##
 实现 fragment和adapter之间的方法互调
+## 2017-7-19 ##
+activity与activity之间返回值的调用的方法

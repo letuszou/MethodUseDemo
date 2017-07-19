@@ -22,13 +22,36 @@ public class ActivityMethodActivity extends AppCompatActivity {
         btn_activity_method_activity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(ActivityMethodActivity.this,ActivityMethodTwoActivity.class));
+                Intent intent = new Intent(ActivityMethodActivity.this,ActivityMethodTwoActivity.class);
+                intent.putExtra("isShowFirst",true);
+                startActivity(intent);
+
+            }
+        });
+
+        Button btn_activity_method_activity2 = (Button) findViewById(R.id.btn_activity_method_activity2);
+        btn_activity_method_activity2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+        click2();
             }
         });
 
     }
 
+    private void click2(){
+        Intent intent = new Intent(ActivityMethodActivity.this,ActivityMethodTwoActivity.class);
+        startActivityForResult(intent,0);
+    }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if(requestCode ==0 && resultCode ==1){
+            method2(data.getStringExtra("back"));
+        }
+    }
 
     public static ActivityMethodActivity instance = null;
 
@@ -37,7 +60,10 @@ public class ActivityMethodActivity extends AppCompatActivity {
     }
 
     public void method(){
-        Toast.makeText(ActivityMethodActivity.this,"activity调用了activity的方法",Toast.LENGTH_SHORT).show();
+        Toast.makeText(ActivityMethodActivity.this,"activity调用了activity的方法-用静态对象",Toast.LENGTH_SHORT).show();
+    }
+    public void method2(String back){
+        Toast.makeText(ActivityMethodActivity.this,"activity调用了activity的方法-用回调,数据为："+back,Toast.LENGTH_SHORT).show();
     }
 
 }
