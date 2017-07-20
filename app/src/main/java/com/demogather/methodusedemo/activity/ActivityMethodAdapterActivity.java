@@ -3,6 +3,7 @@ package com.demogather.methodusedemo.activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
@@ -44,12 +45,28 @@ public class ActivityMethodAdapterActivity extends AppCompatActivity {
                 activityMethodAdapter.adapterMethod();
             }
         });
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast.makeText(ActivityMethodAdapterActivity.this,"点击了item",Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
     }
 
     private void init(){
         stringList = new ArrayList<String>();
         activityMethodAdapter = new ActivityMethodAdapter(ActivityMethodAdapterActivity.this,stringList);
         listView.setAdapter(activityMethodAdapter);
+
+        activityMethodAdapter.setOnItemClickListener(new ActivityMethodAdapter.OnButtonClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Toast.makeText(ActivityMethodAdapterActivity.this,"点击了文字",Toast.LENGTH_SHORT).show();
+            }
+        });
 
     }
 
