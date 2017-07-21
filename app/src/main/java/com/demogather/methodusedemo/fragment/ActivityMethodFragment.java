@@ -6,7 +6,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.Toast;
 
 import com.demogather.methodusedemo.R;
 import com.demogather.methodusedemo.activity.FragmentMethodActivity;
@@ -30,10 +29,6 @@ public class ActivityMethodFragment extends Fragment {
                 ((FragmentMethodActivity)getActivity()).method();
             }
         });
-    }
-
-    public void method(){
-        Toast.makeText(getActivity(),"第二个fragment调用第一个fragment的方法",Toast.LENGTH_SHORT).show();
     }
 
 
